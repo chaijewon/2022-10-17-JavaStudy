@@ -96,6 +96,8 @@ public class 변수정리 {
         //System.out.println("b="+b);
         //System.out.printf("a=%d",a);     JDK1.8  ==> JDK1.9~  => 유료 
         // openjdk
+        int c=0xA;
+        System.out.println(c);
 	}
 
 }

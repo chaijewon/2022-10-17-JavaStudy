@@ -30,8 +30,19 @@ public class 변수초기화 {
 		int c=a; // 임시변수 설정 == sort
 		a=b;
 		b=c;
-		
+		char d=65; 
+		System.out.println("d="+d);
 		System.out.println("a="+a+",b="+b);
+		System.out.println(/*출력*/"Hello /*Java*/!!");
+		
+		int $abc=100;
+		System.out.println($abc);
+		
+		int a1=123456;
+		float d1=123456.78F;// 부동소수점 
+		int r=(int)((d1-a1)*100);
+		System.out.println(r);
+
 	}
 
 }
