@@ -74,7 +74,18 @@ public class 반복문제어문_3 {
         		 same++; // 비긴 횟수 
         	 }
         	 
+        	 // 종료 확인 
+        	 System.out.print("게임을 종료할까요?(y/n):");
+        	 char c=scan.next().charAt(0); // Scanner로 문자한개 받기 
+        	 if(c=='y' || c=='Y')
+        	 {
+        		 System.out.println("Game Over!!");
+        		 break; // while을 종료
+        	 }
+        	 
         }
+        // 게임 종료 여부 확인 
+        System.out.printf("%d전 %d승 %d무 %d패\n",count,win,same,lose);
         
 	}
 
