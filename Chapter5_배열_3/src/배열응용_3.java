@@ -35,6 +35,7 @@ public class 배열응용_3 {
 			}
 		}
 		
+		int count=0;
 		//System.out.println(Arrays.toString(com));
 		Scanner scan=new Scanner(System.in);
 		while(true)
@@ -72,6 +73,8 @@ public class 배열응용_3 {
 				continue;
 			}
 			
+			count++;
+			
 			int s=0,b=0; // s=> 같은 자리에 , b=다른 자리에 
 			// 비교 
 			for(int i=0;i<3;i++) // com
@@ -104,6 +107,7 @@ public class 배열응용_3 {
 			// 종료여부 확인 
 			if(s==3)
 			{
+				System.out.println("입력횟수:"+count);
 				System.out.println("Game Over!!");
 				break;
 			}
