@@ -149,6 +149,7 @@ public class 객체지향프로그램_4 {
         		Elements singer=doc.select("tr.list a.artist");
         		Elements album=doc.select("tr.list a.albumtitle");
         		Elements etc=doc.select("tr.list span.rank");
+        		Elements poster=doc.select("tr.list a.cover img");
         		for(int j=0;j<title.size();j++)
         		{
         			music[k]=new Music();
@@ -158,6 +159,7 @@ public class 객체지향프로그램_4 {
         		    music[k].album=album.get(j).text();
         		    String s=etc.get(j).text();
         		    music[k].state=s.replaceAll("[^가-힣]", "");
+        		    music[k].poster=poster.get(j).attr("src");
         		    //music[k].idcrement=Integer.parseInt(s.replaceAll("[^0-9]", ""));
         			/*System.out.println(k+1);
         			System.out.println(title.get(j).text());
@@ -182,7 +184,7 @@ public class 객체지향프로그램_4 {
         	else
         		str="NEW";
         	System.out.println((i+1)+"."+str+" "+music[i].title+" "+music[i].singer+" "
-        			+music[i].album);
+        			+music[i].album+" "+music[i].poster);
         }
 	}
 
