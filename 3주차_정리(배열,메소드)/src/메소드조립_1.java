@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class 메소드조립_1 {
     // 메소드는 선언 => 구현 클래스{}안에서만 사용이 가능 
 	// 중복없는 난수 발생 
-	static int[] rand()
+	static int[] rand()//com
 	{
 		int[] com=new int[3];
 		for(int i=0;i<3;i++)
@@ -24,7 +24,7 @@ public class 메소드조립_1 {
 		return com;
 	}
 	// 사용자 입력 
-	static int[] userInput()
+	static int[] userInput()// input,user
 	{
 		int[] user=new int[3];
 		Scanner scan=new Scanner(System.in);
@@ -63,7 +63,7 @@ public class 메소드조립_1 {
 		return user;
 	}
 	// 비교
-	static int compare(int[] com,int[] user)
+	static int compare(int[] com,int[] user)// com.user , s,b
 	{
 		int s=0,b=0;
 		for(int i=0;i<3;i++) // com ==> 0 , user = 0,1,2 , com=1 user=0,1,2 , com=2 user=0,1,2
@@ -83,11 +83,11 @@ public class 메소드조립_1 {
 		return s;
 	}
 	// 힌트
-	static void hint(int[] user, int s, int b)
+	static void hint(int[] user, int s, int b)// user,s ,b
 	{
 		System.out.printf("Input Number:%d%d%d,Result:%dS-%dB\n",user[0],user[1],user[2],s,b);
 	}
-	static boolean isEnd(int s)
+	static boolean isEnd(int s) //s
 	{
 		if(s==3)
 			return true;
