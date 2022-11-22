@@ -29,7 +29,7 @@ public class MainClass_Format_2 {
 				  +"',"+age+",'"+post+"','"+email+"')";
 		System.out.println(sql);
 		
-		String msg="INSERT INTO member VALUES(''{0}'',''{1}'',''{2}'',''{3}'',{4},''{5}'',''{6}'')";
+		String msg="InSeRt INTO member VALUES(''{0}'',''{1}'',''{2}'',''{3}'',{4},''{5}'',''{6}'')";
 		Object[] obj={name,sex,addr,tel,age,post,email};
 		System.out.println(MessageFormat.format(msg, obj));
 		
