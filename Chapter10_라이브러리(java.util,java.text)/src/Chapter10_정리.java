@@ -44,11 +44,16 @@ import java.util.Calendar;
  *   
  *   
  */
+interface MyFunction{
+	public int max(int a,int b);
+}
 public class Chapter10_정리 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+        MyFunction f=(int a,int b)->a>b?a:b;
+        int i=f.max(100, 110);
+        System.out.println(i);
 	}
 
 }
