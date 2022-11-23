@@ -1,6 +1,12 @@
 package com.sist.movie;
 import java.util.*;
 import java.io.*;
+/*
+ *   목록 
+ *   상세 
+ *   검색 
+ *   ----
+ */
 public class MovieSystem {
     private static ArrayList movieList=new ArrayList();// => 오라클 
     static
@@ -20,7 +26,7 @@ public class MovieSystem {
     		String[] temp=movie.split("\n"); // 한줄씩 읽기 
     		for(String m:temp) //m=>영화 한개에 정보
     		{
-    			String[] mm=m.split("\\|");
+    			String[] mm=m.split("\\|");// StringTokenizer
     			Movie mov=new Movie();
     			mov.setMno(Integer.parseInt(mm[0]));
     			mov.setTitle(mm[1]);
@@ -67,6 +73,36 @@ public class MovieSystem {
     public Movie movieDetailData(int mno)
     {
     	return (Movie)movieList.get(mno-1);
+    }
+    public ArrayList movieFind(int type,String fd)
+    {
+    	ArrayList list=new ArrayList(); // 찾은 데이터를 묶어서 전송 
+    	for(int i=0;i<movieList.size();i++)
+    	{
+    		Movie m=(Movie)movieList.get(i);
+    		if(type==1)
+    		{
+    			if(m.getTitle().contains(fd))
+    			{
+    				list.add(m);
+    			}
+    		}
+    		else if(type==2)
+    		{
+    			if(m.getActor().contains(fd))
+    			{
+    				list.add(m);
+    			}
+    		}
+    		else if(type==3)
+    		{
+    			if(m.getGenre().contains(fd))
+    			{
+    				list.add(m);
+    			}
+    		}
+    	}
+    	return list;
     }
 }
 
