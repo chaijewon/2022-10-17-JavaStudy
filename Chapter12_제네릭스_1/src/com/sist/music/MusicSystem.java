@@ -124,7 +124,7 @@ public class MusicSystem {
 					   +etc.get(i).text());*/
 			   Music m=new Music(); // m=>100개
 			   m.setMno(mno);
-			   m.setCno(1);
+			   m.setCno(2);
 			   m.setTitle(title.get(i).text());
 			   m.setSinger(singer.get(i).text());
 			   m.setAlbum(album.get(i).text());
@@ -149,13 +149,25 @@ public class MusicSystem {
    }
    // 요청에 대한 처리 
    // 목록 => 지니/멜론 => 나눠서 처리  ==> cno
+   public ArrayList<Music> movieCategoryData(int cno)
+   {
+	   ArrayList<Music> mList=new ArrayList<Music>();//음악정보만 모아서 전송
+	   for(Music m:list)
+	   {
+		   if(m.getCno()==cno)
+		   {
+			   mList.add(m);
+		   }
+	   }
+	   return mList;
+   }
    // 노래 검색 (노래 / 가수명)
    // 상세보기 ==> mno
    // 댓글 / 추천 .... 음반 구매 , 포인트 충전 ....
-   public static void main(String[] args) {
+   /*public static void main(String[] args) {
 	  MusicSystem m=new MusicSystem();
 	  System.out.println(m.list.size());
-   }
+   }*/
 }
 
 
